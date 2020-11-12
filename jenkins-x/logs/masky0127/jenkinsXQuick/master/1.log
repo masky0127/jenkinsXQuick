@@ -1,0 +1,110 @@
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-c5qwz-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1605150074.1249235,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-c5qwz-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-c5qwz-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-c5qwz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-masky0127-jenkinsxquick-master-c5qwz-4phhz[0m
+{"level":"info","ts":1605150220.7347353,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*****0127/jenkinsXQuick.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1605150220.7348056,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1605150220.7720184,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-c5qwz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-c5qwz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:29cdec23ca0c79311e265726daa6390ca33c6b9d
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-c5qwz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-c5qwz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-c5qwz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E1112 03:03:42.672867       9 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0001] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0002] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0003] Executing 3 build triggers                   
+[36mINFO[0m[0003] Checking for cached layer JenkinsCluster.azurecr.io/todo/cache:4603157fb951c8b4502529c64ddc571c85e381ce4686ea05728e14a56a118e66... 
+[36mINFO[0m[0003] No cached layer found for cmd COPY requirements.txt /usr/src/app/ 
+[36mINFO[0m[0003] cmd: EXPOSE                                  
+[36mINFO[0m[0003] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0003] Unpacking rootfs as cmd COPY requirements.txt /usr/src/app/ requires it. 
+[36mINFO[0m[0017] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0017] Resolving 1 paths                            
+[36mINFO[0m[0017] Taking snapshot of files...                  
+[36mINFO[0m[0017] Pushing layer JenkinsCluster.azurecr.io/todo/cache:4603157fb951c8b4502529c64ddc571c85e381ce4686ea05728e14a56a118e66 to cache now 
+[36mINFO[0m[0017] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0017] Taking snapshot of full filesystem...        
+[36mINFO[0m[0028] Resolving 27638 paths                        
+[36mINFO[0m[0031] cmd: /bin/sh                                 
+[36mINFO[0m[0031] args: [-c pip install --no-cache-dir -r requirements.txt] 
+[36mINFO[0m[0031] Running: [/bin/sh -c pip install --no-cache-dir -r requirements.txt] 
+You are using pip version 10.0.1, however version 20.3b1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[36mINFO[0m[0033] Taking snapshot of full filesystem...        
+[36mINFO[0m[0033] Resolving 28054 paths                        
+[36mINFO[0m[0036] Pushing layer JenkinsCluster.azurecr.io/todo/cache:26208b704f381cfc1f456d1b1b9697de2e61930f2b836f1a4480488b7e191354 to cache now 
+[36mINFO[0m[0036] COPY . /usr/src/app                          
+[36mINFO[0m[0036] Resolving 115 paths                          
+[36mINFO[0m[0036] Taking snapshot of files...                  
+[36mINFO[0m[0036] COPY requirements.txt .                      
+[36mINFO[0m[0036] Resolving 1 paths                            
+[36mINFO[0m[0036] Taking snapshot of files...                  
+[36mINFO[0m[0036] Pushing layer JenkinsCluster.azurecr.io/todo/cache:adb40598f3b4cfd1eacd3dd0a852cdc6be89b8fcc863cee720c2f52fcb9acdea to cache now 
+[36mINFO[0m[0036] Pushing layer JenkinsCluster.azurecr.io/todo/cache:46404980d1757fad4e41c38fc830b667646f71d68cd74bd7f9ac606037397b8e to cache now 
+[36mINFO[0m[0036] ENV PORT 8080                                
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0036] EXPOSE 8080                                  
+[36mINFO[0m[0036] cmd: EXPOSE                                  
+[36mINFO[0m[0036] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0036] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0036] CMD ["app.py"]                               
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-c5qwz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-c5qwz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/jenkinsxquick to an unshallow repository
+Generating change log from git ref dff35482389bf93134dfdcaef1c5673c5cea578f => 95b7a5006744f53c32f3d0a163259a5c8238cba8
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Finding issues in commit messages using git format
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+WARNING: No release found for *****0127/jenkinsXQuick and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/*****0127/jenkinsXQuick/releases/tag/v0.0.1
+generated: /workspace/source/charts/jenkinsxquick/templates/release.yaml
+Created Release jenkinsxquick-0-0-1 resource in namespace **
+Updating PipelineActivity *****0127-jenkinsxquick-master-1 with version 0.0.1
+Updated PipelineActivities *****0127-jenkinsxquick-master-1 with release notes URL: https://github.com/*****0127/jenkinsXQuick/releases/tag/v0.0.1
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-c5qwz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file jenkinsxquick-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 401 response: {"error":"unauthorized"}
+error: Failed to post chart to http://jenkins-x-chartmuseum:8080/api/charts due to response 401: {"error":"unauthorized"}
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-helm-release'. The execution of the pipeline has stopped.[0m
