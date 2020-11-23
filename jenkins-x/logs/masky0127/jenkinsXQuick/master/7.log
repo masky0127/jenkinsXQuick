@@ -1,0 +1,41 @@
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-gx444-7[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1606135450.0220551,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-gx444-7[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-gx444-7[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-gx444-7[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-masky0127-jenkinsxquick-master-gx444-6v4k6[0m
+{"level":"info","ts":1606135459.0336576,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*****0127/jenkinsXQuick.git @ v0.0.7 in path /workspace/source"}
+{"level":"warn","ts":1606135459.0337446,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1606135459.07351,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-gx444-7[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-gx444-7[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:a42ad648b2927810bb691ee9368dcde7404895ee
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-gx444-7[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-gx444-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+failed to try resolving symlinks in path "/var/log/pods/**_*****0127-jenkinsxquick-master-gx444-7-from-build-pack-nf-7mnth_8978fc90-7bcd-4b75-a12d-2498603bc8b9/step-build-python-unittest/0.log": lstat /var/log/pods/**_*****0127-jenkinsxquick-master-gx444-7-from-build-pack-nf-7mnth_8978fc90-7bcd-4b75-a12d-2498603bc8b9/step-build-python-unittest/0.log: no such file or directory
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-gx444-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+unable to retrieve container logs for docker://16267d5d2ae6c6715165b433ada24fc38edbd52f6c12cb3e50b3200d060d5f6d
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-gx444-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+unable to retrieve container logs for docker://07438c68a39fac9019c2d7526e1f11ca5699b6b1644131bd05a8aa7898c8dba2
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-gx444-7[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+unable to retrieve container logs for docker://bc45f6dc52ac9b0ac4971d560f030579c8e0060c6e6a6446c7532934b81d8388
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-gx444-7[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+unable to retrieve container logs for docker://7624d3733000e57418a44b123aec418c55ae45d6729de8a253b4d54b26a96bcc
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-gx444-7[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+unable to retrieve container logs for docker://6c315fd2b164aa11d8736ff141ac4e96854fe076a9c12af129a126b08153254e
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-jx-promote'. The execution of the pipeline has stopped.[0m
