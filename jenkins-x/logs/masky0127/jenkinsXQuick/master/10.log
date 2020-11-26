@@ -1,0 +1,111 @@
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-67wwb-10[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1606359654.3270283,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-67wwb-10[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-67wwb-10[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-67wwb-10[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-masky0127-jenkinsxquick-master-67wwb-psr7s[0m
+{"level":"info","ts":1606359664.4914682,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*****0127/jenkinsXQuick.git @ v0.0.10 in path /workspace/source"}
+{"level":"warn","ts":1606359664.4917943,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1606359664.5329177,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-67wwb-10[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-67wwb-10[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:b67e57a2a01ee3fd2c58ecefab6eb7e45c6e8f26
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-67wwb-10[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-67wwb-10[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-67wwb-10[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E1126 03:01:06.661593      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0001] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0002] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0003] Executing 3 build triggers                   
+[36mINFO[0m[0003] Checking for cached layer JenkinsCluster.azurecr.io/todo/cache:4603157fb951c8b4502529c64ddc571c85e381ce4686ea05728e14a56a118e66... 
+[36mINFO[0m[0004] Using caching version of cmd: COPY requirements.txt /usr/src/app/ 
+[36mINFO[0m[0004] Checking for cached layer JenkinsCluster.azurecr.io/todo/cache:26208b704f381cfc1f456d1b1b9697de2e61930f2b836f1a4480488b7e191354... 
+[36mINFO[0m[0004] Using caching version of cmd: RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0004] Checking for cached layer JenkinsCluster.azurecr.io/todo/cache:d67d303e13a0dee22b46e344f195fe074e1bdb037c4738d542dcc1961374f5a3... 
+[36mINFO[0m[0005] No cached layer found for cmd COPY . /usr/src/app 
+[36mINFO[0m[0005] cmd: EXPOSE                                  
+[36mINFO[0m[0005] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY . /usr/src/app requires it. 
+[36mINFO[0m[0021] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0021] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0021] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0021] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0021] COPY . /usr/src/app                          
+[36mINFO[0m[0021] Resolving 117 paths                          
+[36mINFO[0m[0022] Taking snapshot of files...                  
+[36mINFO[0m[0022] COPY requirements.txt .                      
+[36mINFO[0m[0022] Resolving 1 paths                            
+[36mINFO[0m[0022] Taking snapshot of files...                  
+[36mINFO[0m[0022] Pushing layer JenkinsCluster.azurecr.io/todo/cache:d67d303e13a0dee22b46e344f195fe074e1bdb037c4738d542dcc1961374f5a3 to cache now 
+[36mINFO[0m[0022] ENV PORT 8080                                
+[36mINFO[0m[0022] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0022] EXPOSE 8080                                  
+[36mINFO[0m[0022] cmd: EXPOSE                                  
+[36mINFO[0m[0022] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0022] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0022] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0022] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0022] CMD ["app.py"]                               
+[36mINFO[0m[0022] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0022] Pushing layer JenkinsCluster.azurecr.io/todo/cache:0b2be543c64453cad4b2775e7deba2468411c177b7b1f34a6e1ef8d678040427 to cache now 
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-67wwb-10[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-67wwb-10[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/jenkinsxquick to an unshallow repository
+Generating change log from git ref e058a18c3f17aa9823a9559987380d279598a2fd => ff5f6bf8d8eaa4cd306b0c281f5b09870e24f13a
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Finding issues in commit messages using git format
+WARNING: No release found for *****0127/jenkinsXQuick and tag v0.0.10 so creating a new release
+Updated the release information at https://github.com/*****0127/jenkinsXQuick/releases/tag/v0.0.10
+generated: /workspace/source/charts/jenkinsxquick/templates/release.yaml
+Created Release jenkinsxquick-0-0-10 resource in namespace **
+Updating PipelineActivity *****0127-jenkinsxquick-master-10 with version 0.0.10
+Updated PipelineActivities *****0127-jenkinsxquick-master-10 with release notes URL: https://github.com/*****0127/jenkinsXQuick/releases/tag/v0.0.10
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-67wwb-10[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file jenkinsxquick-0.0.10.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mmasky0127-jenkinsxquick-master-67wwb-10[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app jenkinsxquick version 0.0.10 to namespace **-staging
+Created Pull Request: https://github.com/*****0127/environment-carpetspeckle-staging/pull/9
+Added label updatebot to Pull Request https://github.com/*****0127/environment-carpetspeckle-staging/pull/9
+got git provider status pending from PR https://github.com/*****0127/environment-carpetspeckle-staging/pull/9
+got git provider status pending from PR https://github.com/*****0127/environment-carpetspeckle-staging/pull/9
+got git provider status pending from PR https://github.com/*****0127/environment-carpetspeckle-staging/pull/9
+got git provider status pending from PR https://github.com/*****0127/environment-carpetspeckle-staging/pull/9
+Pull Request https://github.com/*****0127/environment-carpetspeckle-staging/pull/9 is merged at sha bd2c2bef0f22cfa066c49755de1149725519ac11
+Pull Request merged but we are not waiting for the update pipeline to complete!
