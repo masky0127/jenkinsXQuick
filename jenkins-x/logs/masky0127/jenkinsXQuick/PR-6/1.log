@@ -1,0 +1,127 @@
+
+Showing logs for build [32mmasky0127-jenkinsxquick-pr-6-se-p2nd9-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1606380063.4920895,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmasky0127-jenkinsxquick-pr-6-se-p2nd9-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmasky0127-jenkinsxquick-pr-6-se-p2nd9-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmasky0127-jenkinsxquick-pr-6-se-p2nd9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-masky0127-jenkinsxquick-pr-6-se-p2nd9-85czl[0m
+{"level":"info","ts":1606380072.5224035,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*****0127/jenkinsXQuick.git @ master in path /workspace/source"}
+{"level":"warn","ts":1606380072.5224938,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1606380072.5621886,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmasky0127-jenkinsxquick-pr-6-se-p2nd9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmasky0127-jenkinsxquick-pr-6-se-p2nd9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:b67e57a2a01ee3fd2c58ecefab6eb7e45c6e8f26,6:0d986c572a726a84d562b07c7ac3ef6e806ea1e4
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git fetch origin --unshallow 0d986c572a726a84d562b07c7ac3ef6e806ea1e4: b67e57a2a01ee3fd2c58ecefab6eb7e45c6e8f26:
+DEBUG: ran git fetch --unshallow origin 0d986c572a726a84d562b07c7ac3ef6e806ea1e4: b67e57a2a01ee3fd2c58ecefab6eb7e45c6e8f26: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard b67e57a2a01ee3fd2c58ecefab6eb7e45c6e8f26
+DEBUG: ran git reset --hard b67e57a2a01ee3fd2c58ecefab6eb7e45c6e8f26 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 0d986c572a726a84d562b07c7ac3ef6e806ea1e4
+DEBUG: ran git merge 0d986c572a726a84d562b07c7ac3ef6e806ea1e4 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e b67e57a2a01ee3fd2c58ecefab6eb7e45c6e8f26..HEAD
+Merged SHA 0d986c572a726a84d562b07c7ac3ef6e806ea1e4 with commit message 'update logo' into base branch master
+
+Showing logs for build [32mmasky0127-jenkinsxquick-pr-6-se-p2nd9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mmasky0127-jenkinsxquick-pr-6-se-p2nd9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E1126 08:41:15.424505       9 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0002] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0003] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0003] Executing 3 build triggers                   
+[36mINFO[0m[0003] Checking for cached layer JenkinsCluster.azurecr.io/todo/cache:4603157fb951c8b4502529c64ddc571c85e381ce4686ea05728e14a56a118e66... 
+[36mINFO[0m[0005] Cache entry expired: JenkinsCluster.azurecr.io/todo/cache:4603157fb951c8b4502529c64ddc571c85e381ce4686ea05728e14a56a118e66 
+[36mINFO[0m[0005] No cached layer found for cmd COPY requirements.txt /usr/src/app/ 
+[36mINFO[0m[0005] cmd: EXPOSE                                  
+[36mINFO[0m[0005] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY requirements.txt /usr/src/app/ requires it. 
+[36mINFO[0m[0019] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0019] Resolving 1 paths                            
+[36mINFO[0m[0019] Taking snapshot of files...                  
+[36mINFO[0m[0019] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0019] Taking snapshot of full filesystem...        
+[36mINFO[0m[0019] Pushing layer JenkinsCluster.azurecr.io/todo/cache:4603157fb951c8b4502529c64ddc571c85e381ce4686ea05728e14a56a118e66 to cache now 
+[36mINFO[0m[0030] Resolving 27638 paths                        
+[36mINFO[0m[0033] cmd: /bin/sh                                 
+[36mINFO[0m[0033] args: [-c pip install --no-cache-dir -r requirements.txt] 
+[36mINFO[0m[0033] Running: [/bin/sh -c pip install --no-cache-dir -r requirements.txt] 
+You are using pip version 10.0.1, however version 20.3b1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[36mINFO[0m[0035] Taking snapshot of full filesystem...        
+[36mINFO[0m[0036] Resolving 28054 paths                        
+[36mINFO[0m[0038] Pushing layer JenkinsCluster.azurecr.io/todo/cache:26208b704f381cfc1f456d1b1b9697de2e61930f2b836f1a4480488b7e191354 to cache now 
+[36mINFO[0m[0038] COPY . /usr/src/app                          
+[36mINFO[0m[0038] Resolving 211 paths                          
+[36mINFO[0m[0038] Taking snapshot of files...                  
+[36mINFO[0m[0038] Pushing layer JenkinsCluster.azurecr.io/todo/cache:fea28587f5d0e037692d91f19c123eac18a9986c35fb88ef8325118a97fb3d76 to cache now 
+[36mINFO[0m[0038] COPY requirements.txt .                      
+[36mINFO[0m[0038] Resolving 1 paths                            
+[36mINFO[0m[0038] Taking snapshot of files...                  
+[36mINFO[0m[0038] ENV PORT 8080                                
+[36mINFO[0m[0038] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0038] Pushing layer JenkinsCluster.azurecr.io/todo/cache:47921c80d29d04a77da2c05c2e46e7480e5c9f0dfe612a0934f4cd604b9ef3b9 to cache now 
+[36mINFO[0m[0038] EXPOSE 8080                                  
+[36mINFO[0m[0038] cmd: EXPOSE                                  
+[36mINFO[0m[0038] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0038] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0038] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0038] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0038] CMD ["app.py"]                               
+[36mINFO[0m[0038] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mmasky0127-jenkinsxquick-pr-6-se-p2nd9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mmasky0127-jenkinsxquick-pr-6-se-p2nd9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-6-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-6-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: JenkinsCluster.azurecr.io\/*****0127\/jenkinsxquick|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-6-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-6-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mmasky0127-jenkinsxquick-pr-6-se-p2nd9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Created environment *****0127-jenkinsxquick-pr-6
+Namespace **-*****0127-jenkinsxquick-pr-6 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 52.154.41.162.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: JenkinsCluster.azurecr.io/*****0127/jenkinsXQuick
+    tag: 0.0.0-SNAPSHOT-PR-6-1
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /tekton/home/.**/jenkins-x-versions
+
+Updating PipelineActivities *****0127-jenkinsxquick-pr-6-1 which has status Running
+Preview application is now available at: http://jenkinsxquick.**-*****0127-jenkinsxquick-pr-6.52.154.41.162.nip.io
